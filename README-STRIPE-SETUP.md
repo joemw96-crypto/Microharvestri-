@@ -37,7 +37,7 @@ a variable**. Add all of these:
 | `STRIPE_PRICE_WEEKLY`    | the weekly Price ID from step 2            |
 | `STRIPE_PRICE_BIWEEKLY`  | the bi-weekly Price ID from step 2         |
 | `STRIPE_PRICE_MONTHLY`   | the monthly Price ID from step 2           |
-| `SITE_URL`               | `https://microharvest.com`                 |
+| `SITE_URL`               | `https://microharvestri.com`                 |
 | `STRIPE_WEBHOOK_SECRET`  | (added in step 6, once you have it)        |
 
 ## 5. Deploy this whole folder to Netlify
@@ -66,7 +66,7 @@ domain.
 
 ## 6. Set up the webhook
 In Stripe: **Developers → Webhooks → + Add endpoint**
-- Endpoint URL: `https://microharvest.com/.netlify/functions/stripe-webhook`
+- Endpoint URL: `https://microharvestri.com/.netlify/functions/stripe-webhook`
 - Events to send: `checkout.session.completed`, `invoice.paid`,
   `customer.subscription.deleted`
 

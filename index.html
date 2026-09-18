@@ -1004,14 +1004,19 @@ gtag('config', 'AW-17982079108');</script>
     var successBox = document.getElementById("success-box");
 
     // If Stripe just redirected back here after checkout, show the right state.
-    var params = new URLSearchParams(window.location.search);
-    if (params.get("success")) {
-      form.classList.add("hide");
-      successBox.classList.add("show");
-      successBox.scrollIntoView({ behavior: "smooth", block: "center" });
-    } else if (params.get("canceled")) {
-      window.alert("Checkout was canceled — no charge was made.");
-    }
+var params = new URLSearchParams(window.location.search);
+
+if (params.get("success")) {
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17982079108/RGLtCNf2xPscEISBw_5C'
+  });
+
+  form.classList.add("hide");
+  successBox.classList.add("show");
+  successBox.scrollIntoView({ behavior: "smooth", block: "center" });
+} else if (params.get("canceled")) {
+  window.alert("Checkout was canceled — no charge was made.");
+}
 
     form.addEventListener("submit", function(e) {
       e.preventDefault();

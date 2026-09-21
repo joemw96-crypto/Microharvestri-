@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2V6QWKE5DV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2V6QWKE5DV');
+gtag('config', 'AW-17982079108');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Mom's Microgreens — Fresh-Cut, Delivered</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF6EC;
+    --paper-2: #F1EBD9;
+    --forest: #1E3A2B;
+    --forest-2: #16291D;
+    --pea: #6B9247;
+    --pea-light: #8FB86B;
+    --soil: #5A3E2B;
+    --radish: #C1432B;
+    --sun: #E8A93B;
+    --ink: #20261F;
+    --ink-soft: #4A5245;
+    --line: rgba(32,38,31,0.16);
+    --card-bg: #FFFFFF;
+    --shadow-soft: 0 1px 0 rgba(32,38,31,0.06);
+  }
+
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #14180F;
+      --paper-2: #1B2113;
+      --ink: #EDEADC;
+      --ink-soft: #B9C2AA;
+      --card-bg: #1E2517;
+      --line: rgba(237,234,220,0.14);
+      --forest: #9CC98C;
+      --forest-2: #C9E3BC;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #14180F;
+    --paper-2: #1B2113;
+    --ink: #EDEADC;
+    --ink-soft: #B9C2AA;
+    --card-bg: #1E2517;
+    --line: rgba(237,234,220,0.14);
+    --forest: #9CC98C;
+    --forest-2: #C9E3BC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    color: var(--forest);
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  a { color: inherit; }
+  img, svg { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--forest);
+    white-space: nowrap;
+  }
+  .logo svg { width: 34px; height: 34px; flex-shrink: 0; }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--forest); border-color: var(--pea); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+  }
+  .btn:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+  .btn-primary { background: var(--radish); color: #FFF8F0; }
+  .btn-primary:hover { background: #A9391F; }
+  .btn-outline { background: transparent; border-color: var(--forest); color: var(--forest); }
+  .btn-outline:hover { background: var(--forest); color: var(--paper); }
+  .btn-small { padding: 9px 16px; font-size: 0.85rem; }
+  .nav .btn { flex-shrink: 0; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 64px 0 72px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .eyebrow-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    color: var(--soil);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  :root[data-theme="dark"] .eyebrow-tag, :root:not([data-theme="light"]) .eyebrow-tag { color: var(--ink-soft); }
+  .eyebrow-tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pea); }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 4.4vw, 3.4rem);
+    max-width: 15ch;
+    letter-spacing: -0.01em;
+  }
+  .hero p.lede {
+    margin-top: 20px;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+  .hero-ctas {
+    margin-top: 32px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .hero-note {
+    margin-top: 22px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-note svg { width: 16px; height: 16px; color: var(--pea); flex-shrink: 0; }
+
+  .hero-art { position: relative; }
+
+  /* ---------- Why section ---------- */
+  .why {
+    padding: 8px 0 72px;
+    border-top: 1px solid var(--line);
+    padding-top: 64px;
+  }
+  .section-head { max-width: 56ch; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); }
+  .section-head p { color: var(--ink-soft); margin-top: 12px; font-size: 1.05rem; }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .why-item svg { width: 40px; height: 40px; color: var(--pea); margin-bottom: 16px; }
+  .why-item h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+  .why-item p { color: var(--ink-soft); font-size: 0.98rem; margin: 0; }
+
+  /* ---------- How it works ---------- */
+  .how {
+    padding: 72px 0;
+    background: var(--paper-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .how-step { position: relative; padding-left: 4px; }
+  .how-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2.6rem;
+    color: var(--pea-light);
+    -webkit-text-stroke: 1.5px var(--pea);
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .how-step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .how-step p { color: var(--ink-soft); margin: 0; font-size: 0.98rem; }
+
+  /* ---------- Plans ---------- */
+  .plans { padding: 80px 0; }
+  .crate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .crate {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 30px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .crate.featured {
+    border-color: var(--pea);
+    box-shadow: 0 0 0 3px rgba(107,146,71,0.12);
+  }
+  .crate-tag {
+    position: absolute;
+    top: -12px;
+    left: 26px;
+    background: var(--sun);
+    color: #3A2A05;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .crate h3 {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+  }
+  .crate .cadence {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+  .crate .price {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1rem;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .crate .price span { font-size: 0.95rem; font-family: 'Work Sans', sans-serif; color: var(--ink-soft); font-weight: 500; }
+  .crate .per-cut { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 20px; }
+  .crate ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    flex-grow: 1;
+  }
+  .crate li { display: flex; gap: 9px; padding: 6px 0; align-items: flex-start; }
+  .crate li svg { width: 17px; height: 17px; color: var(--pea); flex-shrink: 0; margin-top: 2px; }
+  .crate .btn { width: 100%; }
+  .crate input[type="radio"] { display: none; }
+  .crate.selected { border-color: var(--radish); box-shadow: 0 0 0 3px rgba(193,67,43,0.14); }
+
+  /* ---------- Varieties ---------- */
+  .varieties {
+    padding: 80px 0;
+    background: var(--paper-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .variety-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .variety-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .variety-card.on { border-color: var(--pea); box-shadow: 0 0 0 3px rgba(107,146,71,0.12); }
+  .variety-card .v-icon { width: 42px; height: 42px; color: var(--pea); margin-bottom: 14px; }
+  .variety-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #EDE6D3;
+  }
+  .variety-photo svg { width: 100%; height: 100%; display: block; }
+  .variety-card h3 { font-size: 1.2rem; margin-bottom: 2px; }
+  .variety-flavor { font-size: 0.85rem; color: var(--ink-soft); font-style: italic; margin-bottom: 14px; }
+  .variety-benefit { font-size: 0.93rem; color: var(--ink-soft); margin: 0 0 20px; flex-grow: 1; }
+  .variety-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--forest);
+    background: transparent;
+    font-family: inherit;
+  }
+  .variety-card.on .variety-toggle { border-color: var(--pea); background: rgba(107,146,71,0.08); }
+  .variety-toggle .check {
+    width: 20px; height: 20px;
+    border-radius: 6px;
+    border: 1.5px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .variety-card.on .check { background: var(--pea); border-color: var(--pea); }
+  .check svg { display: none; width: 13px; height: 13px; color: #fff; }
+  .variety-card.on .check svg { display: block; }
+  .varieties-note { margin-top: 26px; font-size: 0.9rem; color: var(--ink-soft); }
+
+  /* ---------- Delivery ---------- */
+  .delivery {
+    padding: 76px 0;
+    background: var(--forest);
+    color: var(--paper);
+  }
+  :root[data-theme="dark"] .delivery, :root:not([data-theme="light"]) .delivery { background: var(--paper-2); }
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .delivery h2 { color: var(--paper); font-size: clamp(1.6rem, 3vw, 2.1rem); }
+  :root[data-theme="dark"] .delivery h2, :root:not([data-theme="light"]) .delivery h2 { color: var(--forest); }
+  .delivery p { color: rgba(250,246,236,0.82); font-size: 1.02rem; margin-top: 14px; }
+  :root[data-theme="dark"] .delivery p, :root:not([data-theme="light"]) .delivery p { color: var(--ink-soft); }
+  .delivery-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .day-pill {
+    background: rgba(250,246,236,0.1);
+    border: 1px solid rgba(250,246,236,0.28);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    color: var(--paper);
+  }
+  :root[data-theme="dark"] .day-pill, :root:not([data-theme="light"]) .day-pill {
+    background: var(--card-bg); border-color: var(--line); color: var(--ink);
+  }
+  .zip-check {
+    background: rgba(250,246,236,0.08);
+    border: 1px solid rgba(250,246,236,0.25);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  :root[data-theme="dark"] .zip-check, :root:not([data-theme="light"]) .zip-check {
+    background: var(--card-bg); border-color: var(--line);
+  }
+  .zip-check label { display: block; font-size: 0.9rem; margin-bottom: 8px; color: rgba(250,246,236,0.85); }
+  :root[data-theme="dark"] .zip-check label, :root:not([data-theme="light"]) .zip-check label { color: var(--ink-soft); }
+  .zip-row { display: flex; gap: 10px; }
+  .zip-row input {
+    flex: 1;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(250,246,236,0.3);
+    background: rgba(250,246,236,0.06);
+    color: var(--paper);
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+  :root[data-theme="dark"] .zip-row input, :root:not([data-theme="light"]) .zip-row input {
+    background: var(--paper); color: var(--ink); border-color: var(--line);
+  }
+  .zip-row input::placeholder { color: rgba(250,246,236,0.5); }
+  .zip-result { margin-top: 14px; font-size: 0.92rem; min-height: 1.4em; }
+  .zip-yes { color: var(--sun); font-weight: 600; }
+  .zip-no { color: #E8A0A0; }
+
+  /* ---------- Signup ---------- */
+  .signup { padding: 80px 0; }
+  .signup-box {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 44px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 44px;
+  }
+  .signup-info h2 { font-size: 1.7rem; }
+  .signup-info p { color: var(--ink-soft); margin-top: 12px; font-size: 1rem; }
+  .signup-plan-picker {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .plan-pick {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-size: 0.92rem;
+    cursor: pointer;
+  }
+  .plan-pick.active { border-color: var(--radish); background: rgba(193,67,43,0.06); }
+  .plan-pick .p-price { color: var(--ink-soft); }
+
+  form.order-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 0.85rem; font-weight: 600; color: var(--forest); }
+  .field input, .field select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+  .field input:focus-visible, .field select:focus-visible { outline: 2px solid var(--pea); outline-offset: 1px; }
+  .form-note { font-size: 0.82rem; color: var(--ink-soft); margin-top: 4px; }
+  .success-box {
+    display: none;
+    background: rgba(107,146,71,0.1);
+    border: 1px solid var(--pea);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 0.95rem;
+    color: var(--forest);
+  }
+  .success-box.show { display: block; }
+  form.order-form.hide { display: none; }
+
+  /* ---------- FAQ ---------- */
+  .faq { padding: 12px 0 80px; }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
+  details {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 22px;
+    background: var(--card-bg);
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--forest);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary .chev { transition: transform 0.15s ease; flex-shrink: 0; color: var(--pea); }
+  details[open] summary .chev { transform: rotate(180deg); }
+  details p { color: var(--ink-soft); margin: 14px 0 0; font-size: 0.95rem; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 44px 0 32px;
+  }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-weight: 600; color: var(--forest); }
+  .footer-brand svg { width: 26px; height: 26px; }
+  footer .fine { color: var(--ink-soft); font-size: 0.85rem; margin-top: 14px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-art { order: -1; max-width: 280px; margin: 0 auto; }
+    .why-grid, .how-grid, .crate-grid, .variety-grid { grid-template-columns: 1fr; }
+    .delivery-grid { grid-template-columns: 1fr; }
+    .signup-box { grid-template-columns: 1fr; padding: 28px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 34C20 34 8 28 8 17C8 12 11.5 9 15 9C18 9 20 12 20 15C20 12 22 9 25 9C28.5 9 32 12 32 17C32 28 20 34 20 34Z" fill="var(--pea)"/>
+        <path d="M20 34V19" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Your Mom's Microgreens
+    </div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#varieties">Our greens</a>
+      <a href="index.html#plans">Plans</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="index.html#delivery">Delivery</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a href="index.html#signup" class="btn btn-primary btn-small">Start a subscription</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:40px;">
+    <div class="wrap">
+      <span class="eyebrow-tag"><span class="dot"></span>Why microgreens</span>
+      <h1 style="max-width:20ch;">Small greens, real nutrition, endless uses</h1>
+      <p class="lede">Microgreens aren't a garnish — they're one of the most concentrated ways to get vitamins, antioxidants, and flavor into everyday meals. Here's what the research says, and how people actually use them.</p>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The health case for microgreens</h2>
+        <p>Same plants as their mature versions, harvested at the two-leaf stage — when nutrient density peaks.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C12 2 5 8 5 14C5 17.87 8.13 21 12 21C15.87 21 19 17.87 19 14C19 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h3>Up to 40x more nutrients by weight</h3>
+          <p>Studies from the USDA and university researchers have found some microgreens carry significantly higher concentrations of vitamins C, E, and K, plus antioxidants like beta-carotene, than their mature-leaf equivalents.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <h3>Sulforaphane from broccoli microgreens</h3>
+          <p>Broccoli microgreens contain the same glucosinolate compounds that convert to sulforaphane in mature broccoli — a compound widely studied for its antioxidant and anti-inflammatory properties.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18M3 12l4-4M3 12l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Fiber and plant compounds, low calorie</h3>
+          <p>A serving of microgreens adds meaningful fiber and polyphenols to a meal without adding much in the way of calories — an easy way to boost a plate's nutrition without changing portion sizes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How people actually use them</h2>
+        <p>Microgreens aren't just a garnish — they hold up as a real ingredient.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <span class="how-num">1</span>
+          <h3>Finish a dish</h3>
+          <p>A handful on eggs, tacos, avocado toast, or soup adds texture and a fresh, slightly peppery or sweet bite depending on the variety.</p>
+        </div>
+        <div class="how-step">
+          <span class="how-num">2</span>
+          <h3>Build a salad base</h3>
+          <p>Mixed varieties make a salad on their own — no need to wait for lettuce. Radish microgreens add sharpness; pea tendrils add sweetness.</p>
+        </div>
+        <div class="how-step">
+          <span class="how-num">3</span>
+          <h3>Blend into a smoothie</h3>
+          <p>Pea tendril and broccoli microgreens blend smooth and mild — a way to add greens to a smoothie without the bitterness of kale or spinach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="varieties">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Which variety for which use</h2>
+      </div>
+      <div class="variety-grid">
+        <div class="variety-card on">
+          <h3>Pea Tendril</h3>
+          <div class="variety-flavor">Sweet, mild, a little grassy</div>
+          <p class="variety-benefit">Best for: smoothies, sandwiches, or anyone easing into microgreens for the first time.</p>
+        </div>
+        <div class="variety-card on">
+          <h3>Radish</h3>
+          <div class="variety-flavor">Peppery, sharp, radish-forward</div>
+          <p class="variety-benefit">Best for: tacos, eggs, avocado toast — anywhere you want a little kick.</p>
+        </div>
+        <div class="variety-card on">
+          <h3>Broccoli</h3>
+          <div class="variety-flavor">Mild, faintly grassy, slightly sweet</div>
+          <p class="variety-benefit">Best for: smoothies, stir-fries, or mixing into salads for a subtle, kid-friendly green.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signup" style="padding-top:0;">
+    <div class="wrap" style="text-align:center;">
+      <h2 style="margin-bottom:16px;">Ready to add them to your routine?</h2>
+      <a href="index.html#plans" class="btn btn-primary">See subscription plans</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 34C20 34 8 28 8 17C8 12 11.5 9 15 9C18 9 20 12 20 15C20 12 22 9 25 9C28.5 9 32 12 32 17C32 28 20 34 20 34Z" fill="var(--pea)"/>
+        </svg>
+        Your Mom's Microgreens
+      </div>
+      <p class="fine">Grown local. Cut fresh. Delivered on a schedule that works for you.</p>
+    </div>
+    <p class="fine">© 2026 Your Mom's Microgreens. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

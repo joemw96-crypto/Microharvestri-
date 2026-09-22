@@ -95,24 +95,29 @@ gtag('config', 'AW-17982079108');</script>
     border-bottom: 1px solid var(--line);
   }
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    max-width: 1120px;
-    margin: 0 auto;
-    gap: 16px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: var(--forest);
-    white-space: nowrap;
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--forest);
+  white-space: normal;
+  min-width: 0;
+}
+
   .logo svg { width: 34px; height: 34px; flex-shrink: 0; }
   .nav-links {
     display: flex;
